@@ -1,0 +1,32 @@
+Trong SQL (Structured Query Language), có nhiều loại phép nối có thể sử dụng để kết hợp các bảng hoặc kết quả truy vấn khác. Sau đây là một số loại phép nối phổ biến:
+
+INNER JOIN: Lấy các bản ghi chung của hai bảng dựa trên một điều kiện kết hợp.
+Cú pháp:
+
+SELECT column(s)
+FROM table1
+INNER JOIN table2
+ON table1.column = table2.column;
+LEFT JOIN: Lấy tất cả các bản ghi từ bảng bên trái và các bản ghi liên quan từ bảng bên phải. Nếu không có sự kết hợp trong bảng bên phải, thì giá trị null được trả lại.
+Cú pháp:
+
+SELECT column(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column = table2.column;
+RIGHT JOIN: Ngược lại với LEFT JOIN, lấy tất cả các bản ghi từ bảng bên phải và các bản ghi liên quan từ bảng bên trái. Nếu không có sự kết hợp trong bảng bên trái, thì giá trị null được trả lại.
+Cú pháp:
+
+
+SELECT column(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column = table2.column;
+FULL OUTER JOIN: Kết hợp tất cả các bản ghi của cả hai bảng bằng cách hiển thị null khi bản ghi không có ở bảng đối tác.
+Cú pháp:
+
+SELECT column(s)
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column = table2.column;
+Trên đây chỉ là một số ví dụ về phép nối SQL phổ biến, còn rất nhiều loại khác nhau. Việc lựa chọn loại phép nối phù hợp phụ thuộc vào bài toán cần giải quyết và thông tin mà bạn muốn lấy ra từ các bảng.

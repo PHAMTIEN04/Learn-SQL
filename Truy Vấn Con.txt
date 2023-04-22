@@ -1,0 +1,7 @@
+Truy vấn con (subquery) trong SQL Server là một truy vấn được nhúng bên trong một truy vấn khác và được sử dụng để truy vấn dữ liệu từ một bảng hoặc nhiều bảng phụ thuộc vào kết quả của truy vấn bên ngoài. Kết quả của truy vấn con thường được sử dụng làm điều kiện hoặc tham số cho truy vấn bên ngoài. Truy vấn con có thể được sử dụng trong phần SELECT, FROM, WHERE, HAVING hoặc JOIN của truy vấn chính. Ví dụ:
+
+SELECT TenHang
+FROM MatHang
+WHERE MaNhaSX IN (SELECT MaNhaSX FROM NhaSanXuat WHERE TenNhaSX = 'Hãng máy tính IBM')
+
+Trong truy vấn này, truy vấn con được sử dụng để truy vấn các MaNhaSX của các nhà sản xuất có tên là "Hãng máy tính IBM", và kết quả được sử dụng làm điều kiện cho truy vấn bên ngoài để lấy các Tên hàng tương ứng với các MaNhaSX thuộc truy vấn con.

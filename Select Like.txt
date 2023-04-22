@@ -1,0 +1,15 @@
+Để hiển thị danh sách các mặt hàng mà trong tên mặt hàng có chữ "HDD" trong SQL, 
+bạn có thể sử dụng câu lệnh SELECT với điều kiện LIKE như sau:
+
+SELECT * FROM TenBangMatHang WHERE TenMatHang LIKE '%HDD%';
+Trong đó:
+
+1.TenBangMatHang là tên của bảng mặt hàng.
+2.TenMatHang là tên cột chứa tên mặt hàng.
+3.%HDD% là chuỗi ký tự mà chúng ta muốn tìm kiếm trong tên mặt hàng. Dấu % ở đầu và cuối chuỗi đại 
+diện cho bất kỳ ký tự nào có thể xuất hiện trước hoặc sau chuỗi "HDD".
+*lưu ý : Nếu HDD% thì có nghĩa chuỗi kí tự đó sẽ nằm đầu ngược lại thì nằm cuối
+% định dạng chuỗi
+
+Câu lệnh này sẽ trả về tất cả các hàng trong bảng TenBangMatHang mà tên mặt hàng của chúng có chứa 
+chuỗi "HDD".

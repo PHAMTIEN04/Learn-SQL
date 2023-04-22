@@ -1,0 +1,12 @@
+Trong SQL, GROUP BY là một điều kiện sử dụng để nhóm các bản ghi có giá trị giống nhau trong một hoặc nhiều cột thành các nhóm riêng biệt. Các hàm như SUM, COUNT, AVG, MAX, MIN thường được sử dụng kết hợp với GROUP BY để tìm các giá trị tổng hợp cho từng nhóm.
+
+Ví dụ: Ta có bảng employees với các cột id, name, department, và salary. Để tìm tổng lương của mỗi phòng ban, ta có thể sử dụng câu lệnh SQL sau:
+
+Diff
+Copy
+Insert
+New
+SELECT department, SUM(salary)
+FROM employees
+GROUP BY department;
+Kết quả trả về sẽ là một bảng các dòng, mỗi dòng tương ứng với một phòng ban và tổng lương của các nhân viên thuộc phòng ban đó.

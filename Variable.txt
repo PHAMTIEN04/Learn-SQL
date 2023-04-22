@@ -1,0 +1,40 @@
+Cú pháp khai báo biến trong SQL Server
+Để khai báo biến trong SQL Server, ta sử dụng câu lệnh DECLARE, được biểu diễn như sau:
+DECLARE @variable_name datatype [ = initial_value ], @variable_name datatype [ = initial_value ], ...;
+Khai báo một biến trong SQL Server
+Dùng DECLARE khai báo một biến bất kì
+
+DECLARE @quantrimang VARCHAR(50);
+Câu lệnh DECLARE này khai báo một biến có tên @quantrimang, với kiểu dữ liệu VARCHAR và độ dài 50 kí tự.
+
+Sau đó bạn thay đổi giá trị biến @quantrimang bằng cách sử dụng câu lệnh SET.
+
+SET @quantrimang = 'Hello world';
+Tiếp theo hãy thử với kiểu dữ liệu INT:
+
+DECLARE @site_value INT;
+Sử dụng câu lệnh SET để gán giá trị cho biến @site_value
+
+SET @site_value = 10;
+Vậy biến @site_value ở đây được gán cho số nguyên 10.
+
+Khai báo nhiều biến trong SQL Server
+Cách sử dụng lệnh như sau:
+
+DECLARE @quantrimang VARCHAR(50),        @site_value INT;
+Trong ví dụ này, chúng ta có hai biến được khai báo: biến @quantrimang với kiểu dữ liệu VARCHAR(50) và biến @site_value kiểu dữ liệu INT.
+
+Khai báo biến với giá trị mặc định trong SQL Server
+Trong SQL Server, ta có thể gán giá trị mặc định cho biến ngay lúc khai báo.
+
+DECLARE @quantrimang VARCHAR(50) = 'Hello world';
+Vậy ở đây biến @quantrimang với kiểu dữ liệu VARCHAR và độ dài 50 kí tự được gán mặc định cho giá trị 'Hello world'.
+
+Tương tự ta khai báo với kiểu dữ liệu INT:
+
+DECLARE @site_value INT = 10;
+Khai báo nhiều hơn một biến có gán giá trị ban đầu
+Cách sử dụng lệnh như sau:
+
+DECLARE @quantrimang VARCHAR(50) = 'Hello world';@site_value INT = 10;
+Hai biến @quantrimang và @site_value đã được khai báo ở chung một lệnh và được gán giá trị ban đầu mặc định.

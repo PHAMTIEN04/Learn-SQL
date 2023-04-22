@@ -1,0 +1,28 @@
+Mệnh đề ORDER BY sắp xếp kết quả theo một cột
+ORDER BY trong SQL được sử dụng cùng với SELECT để sắp xếp thứ tự (tăng dần, giảm dần) của tập kết quả trả về. Trước tiên tìm hiểu sắp xếp sql theo một cột.
+
+Ví dụ: kết quả trả về sắp xếp theo tứ tự tăng dần của cột Hoten (do Hoten là text nên sắp xếp theo bảng chữ cái, vần A rồi đến B ..., trong trường hợp cột sắp xếp dạng số thì nó sẽ xếp theo giá trị theo kiểu số.)
+
+Cú pháp ORDER BY SQL
+SELECT danh_sach_cot
+
+FROM ten_bang
+
+[WHERE dieu_kien]
+
+[ORDER BY cot1, cot2, .. cotN] [ASC | DESC]
+
+Lưu ý:
+Desc : Thứ tự giảm dần
+ASC : Thứ tự tăng dần (Mặc định)
+
+Nếu bạn không chọn lệnh ASC hay DESC thì mặc định mệnh đề SQL này sẽ sắp xếp theo thứ tự tăng dần, giống như ORDER BY ASC.
+
+Cột được chọn để sắp xếp phải nằm trong  câu lệnh SELECT
+
+Cách hoạt động của lệnh này trong câu lệnh SELECT SQL như sau:
+
+Bước 1: Chạy mệnh đề FROM để tìm bảng
+Bước 2: Xem xét điều kiện ở mệnh đề WHERE để lọc
+Bước 3: Mệnh đề ORDER BY trong SQL sẽ sắp xếp tăng hoặc giảm dần
+Bước 4: In ra các cột đã chọn ở mệnh đề SELECT
